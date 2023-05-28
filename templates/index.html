@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@48,400,0,0" />
+    <title>House Price</title>
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css'>
+    <script src="https://kit.fontawesome.com/74c0b2949d.js" crossorigin="anonymous"></script>
+    <script src="/static/index.js"></script>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+      
+   <section id="banner">
+        <div class="banner-text">
+            <span></span>
+        <span></span>
+        <span></span>
+            <div class="content">
+            <h1 data-tex="What's happening with house prices now?">What's happening with house prices now?</h1>
+            <h2 data-tex="Will house prices drop or increase?">Will house prices drop or increase?</h2>
+            <h3 data-tex="Well Don't worry Here is the Prediction">Well Don't worry Here is the Prediction</h3>
+            <p data-tex="Click the button to predict">Click the button to predict</p>
+            <a onclick="scrollToSection('input')">Predict</a>
+        </div>
+    </div>
+   </section>
+   <div id="sidenav">
+        <nav>
+            <ul>
+            <li><a class="a1" onclick="scrollToSection('banner')"><span></span>Home</a></li>
+            <li><a class="a2" onclick="scrollToSection('About')"><span></span>About</a></li>
+            <li><a class="a3" onclick="scrollToSection('Contact')"><span></span>Contact</a></li>
+        </ul>
+        </nav>
+   </div>
+   <div id="menubtn">
+        <img src="/static/menu.png" id="menu">
+   </div>
+   <section id="input">
+        <h1>Predict The Price Here</h1>
+    <div class="cube">
+        <div class="face front">
+            {{result}}
+        </div>
+        <div class="face back">
+            {{result}}
+        </div>
+        <div class="face right">
+            {{result}}
+        </div>
+        <div class="face left">
+            {{result}}
+        </div>
+        <div class="face top">
+            {{result}}
+        </div>
+        <div class="face bottom">
+            {{result}}
+        </div>
+      </div>
+    <form class="inputbox" action="/output" method="post" style="overflow-y:scroll;overflow-x: hidden;">
+        <h2>Provide the input</h2>
+        <div class="s">
+        <span class="material-symbols-rounded">
+            edit
+            </span>
+        </div>
+    <div class="input1">
+        <input type="text" id="inputField1" name="inputField1" required onclick="valid()">
+        <span id="message1">CRIM</span>
+    </div>
+    <div class="input1">
+        <input type="text" id="inputField2" name="inputField2" required onclick="valid()">
+        <span id="message2">ZN</span>
+    </div>
+    <div class="input1">
+        <input type="text" id="inputField3" name="inputField3" required onclick="valid()">
+        <span id="message3">INDUS</span>
+    </div>
+    <div class="input1">
+        <input type="text" id="inputField4" name="inputField4" required onclick="valid()">
+        <span id="message4">CHAS</span>
+    </div>
+    <div class="input1">
+        <input type="text" id="inputField5" name="inputField5" required onclick="valid()">
+        <span id="message5">NOX</span>
+    </div>
+    <div class="input1">
+        <input type="text" id="inputField6" name="inputField6" required onclick="valid()">
+        <span id="message6">RM</span>
+    </div>
+    <div class="input1">
+        <input type="text" id="inputField7" name="inputField7" required onclick="valid()">
+        <span id="message7">AGE</span>
+    </div>
+    <div class="input1">
+        <input type="text" id="inputField8" name="inputField8" required onclick="valid()">
+        <span id="message8">DIS</span>
+    </div>
+    <div class="input1">
+        <input type="text" id="inputField9" name="inputField9" required onclick="valid()">
+        <span id="message9">RAD</span>
+    </div>
+    <div class="input1">
+        <input type="text" id="inputField10" name="inputField10" required onclick="valid()">
+        <span id="message10">TAX</span>
+    </div>
+    <div class="input1">
+        <input type="text" id="inputField11" name="inputField11" required onclick="valid()">
+        <span id="message11">PTRATIO</span>
+    </div>
+    <div class="input1">
+        <input type="text" id="inputField12" name="inputField12" required onclick="valid()">
+        <span id="message12">LSTAT</span>
+    </div>
+    <div class="input1">
+        <input type="text" id="inputField13" name="inputField13" required onclick="valid()">
+        <span id="message13">BHK</span>
+    </div>
+    <div class="input1">
+        <button>Create</button>
+    </div>
+    </form>
+   </section>
+   <section id="About">
+        <div class="title-text">
+            <h2>About Project</h2>
+        </div>
+        <div class="text-row">
+            <div class="text-col1">
+                <p>House price prediction is an essential task in the real estate industry,
+                aiding buyers, sellers, and investors in making informed decisions.
+                With the advancements in artificial intelligence (AI) and machine learning (ML),
+                predictive models have become increasingly accurate and reliable.
+                This abstract outlines a study on house price prediction using AI techniques.
+                The objective of this research is to develop an AI-based model that can 
+                accurately predict house prices based on various features such as location, square footage, number of bedrooms, bathrooms, and other relevant factors.</p>
+            </div>
+            <div class="text-col2">
+                 <p>The study utilizes a dataset comprising historical house sale records, 
+                 including both numerical and categorical features.The proposed approach 
+                 involves data preprocessing, feature engineering, and model training. Initially, 
+                 the dataset is cleaned, missing values are handled, and outliers are identified and 
+                 appropriately treated. Feature engineering techniques are applied to extract 
+                 meaningful information from the available features, including one-hot encoding, 
+                 feature scaling, and dimensionality reduction.</p>
+            </div>
+        </div>
+   </section>
+   <section id="Contact">
+        <div class="wapper">
+            <div class="static-text">We are </div>
+            <ul class="dynamic-text">
+                <li><span> THARUN D V</span></li>
+                <li><span> VAISHAL A S</span></li>
+                <li><span> AJITH KUMAR K K</span></li>
+            </ul>
+        </div>
+        <div class="per1">
+        <h4>Tharun D V</h4>
+        <p>Mail</p>
+        <span class="material-symbols-rounded" style="font-size: 39px">
+            mail
+            </span>
+        <a href="https://www.linkedin.com/in/tharun-dv/">Linkedin</a>
+        <i class="fa fa-linkedin" style="font-size:36px"></i>
+        <a href="https://github.com/THARUN-DV">Github</a>
+        <i class="fa fa-github" style="font-size: 36px;"></i>
+    </div>
+    <div class="per2">
+        <h4>Vaishal A S</h4>
+        <p>Mail</p>
+        <span class="material-symbols-rounded" style="font-size: 39px;">
+            mail
+            </span>
+        <a href="https://www.linkedin.com/in/vaishal-as/">Linkedin</a>
+        <i class="fa fa-linkedin" style="font-size:36px"></i>
+        <a href="https://github.com/vaishal-as">Github</a>
+        <i class="fa fa-github" style="font-size:36px"></i>
+    </div>
+    <div class="per3">
+        <h4>Ajith Kumar K K</h4>
+        <p>Mail</p>
+        <span class="material-symbols-rounded" style="font-size: 39px">
+            mail
+            </span>
+        <a href="#">Linkedin</a>
+        <i class="fa fa-linkedin"  style="font-size:36px"></i>
+        <a href="#">Github</a>
+        <i class="fa fa-github" style="font-size:36px"></i>
+    </div>
+   </section>
+   <script>
+    var sidenav =document.getElementById("sidenav")
+    var menubtn =document.getElementById("menubtn")
+    var menu =document.getElementById("menu")
+    sidenav.style.width=="250px"
+    menubtn.onclick = function(){
+        if (sidenav.style.width=="250px"){
+            sidenav.style.width="0";
+            menu.src="/static/menu.png";
+        }
+        else{
+            sidenav.style.width="250px";
+            menu.src="/static/close.png";
+        }
+        
+    }
+</script>
+
+</body>
+</html>
